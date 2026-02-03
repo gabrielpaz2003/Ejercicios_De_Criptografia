@@ -137,11 +137,6 @@ def analisis_frecuencia(mensaje):
 
 
 def analisis_frecuencia(mensaje_cifrado):
-    # Aquí no nos ponemos "finos" con estadística, porque César tiene solo 26 shifts.
-    # Lo más práctico es probar todos y ver cuál genera un texto que tenga sentido.
-    #
-    # El patrón (por defecto "FLAG{") ayuda a detectar rápido el correcto.
-    
     
     patron_buscado = input("¿Qué patrón estás buscando? (ej: PASSWORD{): ")
 
@@ -160,7 +155,6 @@ def analisis_frecuencia(mensaje_cifrado):
     for k in range(26):
         plano = cesar_descifrar(mensaje_cifrado, k)
 
-        # buscamos el patrón tal cual; si el user puso "flag{" en minúscula también ayuda
         if patron_buscado in plano or patron_buscado.lower() in plano.lower():
             encontrado_shift = k
             encontrado_texto = plano
@@ -180,10 +174,5 @@ def analisis_frecuencia(mensaje_cifrado):
 
 ## Aca puedo hacer la llamada a las funciones que necesite:
 
-#print(cesar_descifrar("IODJ{FHVUD_FLIUDGR}", 3))
-#print(rot13("SYNT{FRPERG_SYNT_EBBG13}"))
-
-
-print(analisis_frecuencia("SV OHU JVUZLNBPKV, OHU LUJVUAYHKV BUH MSHN WHYH LS ZPNBPLUAL KLZHMPV MSHN{JYFWAV_HUHSFZPZ}"))
 
 

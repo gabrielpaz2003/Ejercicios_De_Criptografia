@@ -102,32 +102,8 @@ def aplicar_xor_a_binarios(binario_1, binario_2, separador=" "):
 
     return separador.join(grupos)
 
-
-# -----------------------------
-# Llamadas (sin main)
-# -----------------------------
+# Aca puedo hacer llamadas a las funciones
 
 texto_usuario = input("Ingrese texto ASCII: ")
-print("ASCII -> BINARIO:")
+print("ASCII a BINARIO:")
 print(convertir_ascii_a_binario(texto_usuario))
-
-texto_base64 = input("\nIngrese texto BASE64: ")
-print("BASE64 -> BINARIO:")
-print(convertir_base64_a_binario(texto_base64))
-
-binario_usuario = input("\nIngrese BINARIO para convertir a BASE64: ")
-print("BINARIO -> BASE64:")
-print(convertir_binario_a_base64(binario_usuario))
-
-binario_usuario_2 = input("\nIngrese BINARIO para convertir a ASCII: ")
-print("BINARIO -> ASCII:")
-print(convertir_binario_a_ascii(binario_usuario_2))
-
-texto_base64_2 = input("\nIngrese BASE64 para convertir a ASCII: ")
-print("BASE64 -> ASCII (vía binario):")
-print(convertir_base64_a_ascii(texto_base64_2))
-
-binario_xor_1 = input("\nIngrese binario 1 para XOR: ")
-binario_xor_2 = input("Ingrese binario 2 para XOR: ")
-print("XOR:")
-print(aplicar_xor_a_binarios(binario_xor_1, binario_xor_2))
